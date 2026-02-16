@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { navbarStyles } from '../assets/dummyStyles.js';
 import logo from '../assets/logo.png';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { SignedOut, useAuth, useClerk, useUser } from '@clerk/clerk-react';
 
 const Navbar = () => {
@@ -10,12 +10,12 @@ const Navbar = () => {
 
   const { user } = useUser();
   console.log({ user });
-  const { getToken, isSignedIn, isLoaded } = useAuth();
+  const { isSignedIn, isLoaded } = useAuth();
   const clerk = useClerk();
 
   const navigate = useNavigate();
   const profileRef = useRef<HTMLDivElement | null>(null);
-  const TOKEN_KEY = 'token';
+  // const TOKEN_KEY = 'token';
 
   // for token generation (meaning fetch and store also)
   // const fetchAndStoreToken = useCallback(
