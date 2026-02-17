@@ -201,7 +201,7 @@ const AppShell = () => {
 
     return (
       <NavLink
-        to={to || '#'}
+        to={to || '/'}
         onClick={handleClick}
         className={({ isActive }) => `
         ${appShellStyles.sidebarLink}
@@ -283,7 +283,7 @@ const AppShell = () => {
                   Business Profile
                 </SidebarLink>
                 <SidebarLink
-                  to="#"
+                  to=""
                   onClick={logout}
                   icon={
                     <button
